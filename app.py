@@ -22,11 +22,11 @@ class Price(Resource):
 
         eth = search.group(1).replace("&euro;","")
 
-        data = { 'data' : { 'eth':eth, 'btc':btc } }
+        data = { 'eth':eth, 'btc':btc }
 
         return data
 
 api.add_resource(Price, '/price')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5004)
+    app.run(debug=True, host='0.0.0.0', port=80)
